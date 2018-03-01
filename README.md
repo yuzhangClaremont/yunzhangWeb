@@ -115,4 +115,67 @@ migrate:
         def other_hello
             redirect_to(:controller => 'demo', :action => 'index') # go to first function
         end
-    
+
+3.3 View Template
+    erb to process html
+    <% 1+1 %> (calculate value but don't output)
+    <%= 1+1 %> (calculate and outout)
+
+    <% target = 'world' %><br/> (<br/> html new line)
+    <%= "Hello #{target}" %> (have to be double quote, to interprete string)
+
+    12..
+    <br/>
+    <%=
+    3.times do |n|
+        puts n (puts output to console but not in template, =render return value 3)
+    end
+    %>
+
+    <br/>
+    <%3.times do |n| %>
+    <%= n %><br/>
+    <%end%>
+3.4 instance variables (give templates access data gethered by controller)
+    variableRuby
+    @instance_variableRuby (an instance of controller, a ruby class)
+    when erb render template, it matches controllers instance variables
+
+    ->demo_controller.rb
+
+    def index
+    @array = [1,2,3,4,5]
+    render('index')
+    end
+
+    ->index.html.erb
+    <% @array.each do |n| %>
+    <%= n %><br/>
+    <%end%>
+3.5, Links
+    <a href="/demo/index">index page</a> ("url">link name index page)
+
+    rails helper
+    <%= link_to(text,target)%> (target can be url string or {:controller => 'demo', :action => 'index'})
+
+    <br/>
+    <a href="/demo/template"> template page</a><br/>
+    <%= link_to('test page',
+        {:controller =>'controller1', :action=>'test'})%>
+
+www.linkedin.com/in/yun-zhang-claremont
+start Bootstrap
+
+3.6. URL parameters
+    params[:id]
+    params['id']
+
+Website
+apps-> asset -stylesheet
+copy css files in css into stylesheet
+
+copy js to apps -> asset -> javascripts
+
+img to image
+
+copy index html to index, change 

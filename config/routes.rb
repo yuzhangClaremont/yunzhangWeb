@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   root 'demo#index' #tell where is home
   get 'demo/index' # to match it
 
-  get 'demo/template'
+  get 'demo/linkedin'
+
+  get 'demo/github'
 
   get 'demo/other_hello' # another action in controller defined
 

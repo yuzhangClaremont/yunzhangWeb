@@ -1,0 +1,173 @@
+define.alias("ember-cli-artdeco-carousel/components/artdeco-carousel-pagination","notifications-ext/components/artdeco-carousel-pagination")
+define.alias("ember-cli-artdeco-carousel/components/artdeco-carousel-slide-list","notifications-ext/components/artdeco-carousel-slide-list")
+define.alias("ember-cli-artdeco-carousel/components/artdeco-carousel-slide","notifications-ext/components/artdeco-carousel-slide")
+define.alias("ember-cli-artdeco-carousel/components/artdeco-carousel","notifications-ext/components/artdeco-carousel")
+define.alias("artdeco-hoverables/components/artdeco-hoverable-trigger","notifications-ext/components/artdeco-hoverable-trigger")
+define.alias("artdeco-hoverables/components/artdeco-hovercard-content","notifications-ext/components/artdeco-hovercard-content")
+define.alias("ember-cli-artdeco-modal/components/artdeco-modal-content","notifications-ext/components/artdeco-modal-content")
+define.alias("ember-cli-artdeco-modal/components/artdeco-modal-footer","notifications-ext/components/artdeco-modal-footer")
+define.alias("ember-cli-artdeco-modal/components/artdeco-modal-header","notifications-ext/components/artdeco-modal-header")
+define.alias("ember-cli-artdeco-modal/components/artdeco-modal-overlay","notifications-ext/components/artdeco-modal-overlay")
+define.alias("ember-cli-artdeco-modal/components/artdeco-modal","notifications-ext/components/artdeco-modal")
+define.alias("artdeco-hoverables/components/artdeco-tooltip-content","notifications-ext/components/artdeco-tooltip-content")
+define.alias("ember-semaphore/components/ember-semaphore","notifications-ext/components/ember-semaphore")
+define.alias("ember-wormhole/components/ember-wormhole","notifications-ext/components/ember-wormhole")
+define("notifications-ext/components/entity-image",["exports","notifications-common/components/entity-image"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=t.default.extend({entityPictureHeight:56,entityPictureWidth:56})})
+define("notifications-ext/components/generic-card",["exports","notifications-common/components/generic-card","notifications-common/utils/card-factory"],function(e,t,n){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=t.default.extend({_setupInstance:function(){this.instance=(0,n.default)(Ember.Object.create({value:this.get("card"),trackingId:this.get("trackingId"),objectUrn:this.get("objectUrn")}),!0)}})})
+define.alias("ember-cli-artdeco-carousel/components/internal/page-indicator","notifications-ext/components/internal/page-indicator")
+define("notifications-ext/components/lazy-ad-renderer",["exports","shared/utils/lifecycle-utils","notifications-ext/templates/components/lazy-ad-renderer"],function(e,t,n){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+var i=Ember.inject.service,o=Ember.Component
+e.default=o.extend({layout:n.default,scheduler:i("scheduler"),renderAdSection:!1,tagName:"",didInsertElement:function(){var e=this
+this._super.apply(this,arguments)
+this.get("scheduler").scheduleWork("afterContentPaint",(function(){(0,t.isAlive)(e)&&e.set("renderAdSection",!0)}))}})})
+define.alias("ember-cli-pemberly-artdeco/components/linkedin-logo","notifications-ext/components/linkedin-logo")
+define("notifications-ext/components/notifications-index",["exports","notifications-common/components/notifications-index"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=t.default.extend({numDisplayInitialRender:7})})
+define.alias("ember-cli-pemberly-tracking/components/shared/external-link","notifications-ext/components/shared/external-link")
+define("notifications-ext/config/environment",["exports"],function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+var t=void 0
+try{var n=document.querySelector('meta[name="notifications-ext/config/environment"]').getAttribute("content")
+t=JSON.parse(unescape(n))}catch(e){t={eyeglass:{eyeglass:{modules:[{path:"/export/home/tester/orca/MP_TRUNKDEV_POSTCOMMIT/workspace/voyager-web_04f3a6726135f11fa9ab52526d0306125dbd2702/extended/lib/shared-ext/se-base"},{path:"/export/home/tester/orca/MP_TRUNKDEV_POSTCOMMIT/workspace/voyager-web_04f3a6726135f11fa9ab52526d0306125dbd2702/global/theme"}]},annotation:"notifications-ext",persistentCache:!1}}}e.default=t})
+define.alias("notifications-common/controllers/aggregated-prop","notifications-ext/controllers/aggregated-prop")
+define.alias("notifications-common/controllers/aggregated","notifications-ext/controllers/aggregated")
+define.alias("notifications-common/controllers/application","notifications-ext/controllers/application")
+define("notifications-ext/controllers/index",["exports","notifications-common/controllers/index"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=t.default.extend({init:function(){this._super.apply(this,arguments)
+this._routeTransformMap={"profile-ge.category":"email-ge.category","abi.results.member":"mynetwork.abi.results.member"}}})})
+define.alias("notifications-common/controllers/segment","notifications-ext/controllers/segment")
+define.alias("notifications-common/controllers/settings","notifications-ext/controllers/settings")
+define("notifications-ext/engine",["exports","ember-engines/engine","ember-resolver","ember-load-initializers","notifications-ext/utils/engine-dependencies"],function(e,t,n,i,o){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+var a=t.default.extend({modulePrefix:"notifications-ext",Resolver:n.default,init:function(){this._super.apply(this,arguments)
+this.dependencies={externalRoutes:o.NOTIFICATIONS_EXT_EXTERNAL_ROUTES,services:o.NOTIFICATIONS_EXT_SERVICES}}});(0,i.default)(a,"notifications-ext")
+e.default=a})
+define.alias("ember-cli-pemberly-i18n/helpers/bidi-dir","notifications-ext/helpers/bidi-dir")
+define.alias("ember-mpr-images/helpers/custom-image","notifications-ext/helpers/custom-image")
+define.alias("ember-cli-pemberly-i18n/helpers/format-currency","notifications-ext/helpers/format-currency")
+define.alias("ember-cli-pemberly-i18n/helpers/format-date","notifications-ext/helpers/format-date")
+define.alias("i18n-helpers/helpers/format-duration","notifications-ext/helpers/format-duration")
+define.alias("ember-cli-pemberly-i18n/helpers/format-name","notifications-ext/helpers/format-name")
+define.alias("ember-cli-pemberly-i18n/helpers/format-number","notifications-ext/helpers/format-number")
+define.alias("ember-cli-pemberly-i18n/helpers/format-time","notifications-ext/helpers/format-time")
+define.alias("ember-semaphore/helpers/format-title","notifications-ext/helpers/format-title")
+define.alias("ember-cli-pemberly-i18n/helpers/format-truncate","notifications-ext/helpers/format-truncate")
+define.alias("ember-cli-pemberly-i18n/helpers/is-any-locale","notifications-ext/helpers/is-any-locale")
+define.alias("ember-cli-pemberly-i18n/helpers/is-cjk-language","notifications-ext/helpers/is-cjk-language")
+define.alias("ember-cli-pemberly-i18n/helpers/is-rtl-content","notifications-ext/helpers/is-rtl-content")
+define.alias("ember-cli-pemberly-i18n/helpers/is-rtl-language","notifications-ext/helpers/is-rtl-language")
+define.alias("ember-mpr-images/helpers/lazy-image","notifications-ext/helpers/lazy-image")
+define.alias("ember-cli-pemberly-artdeco/helpers/li-icon","notifications-ext/helpers/li-icon")
+define.alias("ember-route-action-helper/helpers/route-action","notifications-ext/helpers/route-action")
+define.alias("ember-cli-pemberly-i18n/helpers/t-link-to","notifications-ext/helpers/t-link-to")
+define.alias("ember-cli-pemberly-i18n/helpers/t-make-name","notifications-ext/helpers/t-make-name")
+define.alias("ember-cli-pemberly-i18n/helpers/t","notifications-ext/helpers/t")
+define.alias("text-view-model/helpers/text-view-model","notifications-ext/helpers/text-view-model")
+define.alias("ember-cli-pemberly-tracking/helpers/tracked-action","notifications-ext/helpers/tracked-action")
+define.alias("ember-cli-pemberly-tracking/helpers/tracking","notifications-ext/helpers/tracking")
+define("notifications-ext/initializers/artdeco",["exports","artdeco-eyeglass","ember-cli-pemberly-artdeco/icons-loader","notifications-ext/config/environment"],function(e,t,n,i){"use strict"
+function o(e,t){var n=e[t]
+e[t]=function(){l.forEach((function(e){return e&&"function"==typeof e.teardown&&e.teardown()}))
+n&&"function"==typeof n&&n.call(e)}}function a(e){if("undefined"!=typeof document){var t=i.default.environment,a="test"!==t
+n.default.load(a).catch(s)
+l.forEach((function(e){return e.install()}))
+"function"==typeof e.willDestroy?o(e,"willDestroy"):"function"==typeof e.destroy&&o(e,"destroy")}}function s(e){throw e}Object.defineProperty(e,"__esModule",{value:!0})
+e.initialize=a
+var l=[t.default.contextClasses,t.default.buttonAnimation,t.default.floatingLabel,t.default.focusOutline]
+e.default={name:"artdeco",initialize:a}})
+define.alias("ember-cli-pemberly-i18n/initializers/i18n","notifications-ext/initializers/i18n")
+define.alias("ember-spaniel/initializers/spaniel","notifications-ext/initializers/spaniel")
+define("notifications-ext/instance-initializers/-t-link-to",["exports","ember-stdlib/utils/is-browser"],function(e,t){"use strict"
+function n(e){if(t.default){e.lookup("service:-t-link-to")}}Object.defineProperty(e,"__esModule",{value:!0})
+e.initialize=n
+e.default={name:"-t-link-to",initialize:n}})
+define("notifications-ext/instance-initializers/locale",["exports","ember-stdlib/utils/is-browser","notifications-ext/services/locale"],function(e,t,n){"use strict"
+function i(e){var t=document.querySelector("meta[name="+e+"]")
+if(t)return t.getAttribute("content")}function o(){var e=i("i18nLocale"),t={}
+e&&(t.locale=e)
+return t}function a(e){if(t.default){var a=e.lookup("service:locale"),l=void 0
+if(!l){var r=o()
+r.locale&&s.test(r.locale)&&(l=r.locale)}if(!l){Ember.Logger.info("Didn't find locale meta tag. Defaulting to "+n.DEFAULT_LOCALE)
+l=n.DEFAULT_LOCALE}var c=i("requestIpCountryCode")
+a.setProperties({interfaceLocale:l,requestIpCountryCode:c})}}Object.defineProperty(e,"__esModule",{value:!0})
+e.initialize=a
+var s=/([a-z]{2}_[A-Z]{2})/
+e.default={name:"locale",initialize:a}})
+define.alias("notifications-common/routes/aggregated-profile","notifications-ext/routes/aggregated-profile")
+define.alias("notifications-common/routes/aggregated-prop","notifications-ext/routes/aggregated-prop")
+define.alias("notifications-common/routes/aggregated","notifications-ext/routes/aggregated")
+define("notifications-ext/routes/application",["exports","notifications-common/routes/application","shared-ext/mixins/show-light-animation","notifications-ext/templates/application"],function(e,t,n,i){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+var o=Ember.inject.service
+e.default=t.default.extend(n.default,{i18n:o("i18n"),init:function(){this._super.apply(this,arguments)
+this.titleToken=this.get("i18n").getMessageRenderer(i.default,"i18n_notifications_title")()},_getSettingsTemplate:function(){return i.default}})})
+define("notifications-ext/routes/index",["exports","notifications-common/routes/index"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=t.default.extend({launchpad:Ember.inject.service("launchpad"),actions:{willTransition:function(e){this._super.apply(this,arguments)
+this.get("launchpad").attachFilesWhenTransition(e.data)
+return!0}}})})
+define.alias("notifications-common/routes/index/index","notifications-ext/routes/index/index")
+define.alias("notifications-common/routes/segment/index","notifications-ext/routes/segment/index")
+define.alias("notifications-common/routes/settings","notifications-ext/routes/settings")
+define.alias("notifications-common/routes/settings/group","notifications-ext/routes/settings/group")
+define("notifications-ext/routes/settings/index",["exports","notifications-common/routes/settings/index"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.default=t.default.extend({beforeModel:function(e){var t=e.queryParams
+this._super.apply(this,arguments)
+this._hideBackButton="panel"===t.origin}})})
+define.alias("ember-cli-artdeco-modal/services/-private/artdeco/modal","notifications-ext/services/-private/artdeco/modal")
+define.alias("ember-cli-pemberly-i18n/services/-t-link-to","notifications-ext/services/-t-link-to")
+define.alias("artdeco-hoverables/services/artdeco-hoverable","notifications-ext/services/artdeco-hoverable")
+define.alias("ember-cli-pemberly-i18n/services/formatter","notifications-ext/services/formatter")
+define.alias("ember-cli-pemberly-i18n/services/i18n","notifications-ext/services/i18n")
+define.alias("ember-cli-pemberly-i18n/services/locale","notifications-ext/services/locale")
+define.alias("ember-mpr-images/services/mpr","notifications-ext/services/mpr")
+define.alias("ember-cli-artdeco-carousel/services/resize-event","notifications-ext/services/resize-event")
+define.alias("ember-spaniel/services/viewport","notifications-ext/services/viewport")
+define("notifications-ext/templates/aggregated-profile",["exports","notifications-common/templates/aggregated-profile"],function(e,t){"use strict"
+e.__esModule=!0
+Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})
+define("notifications-ext/templates/aggregated-prop",["exports","notifications-common/templates/aggregated-prop"],function(e,t){"use strict"
+e.__esModule=!0
+Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})
+define("notifications-ext/templates/aggregated",["exports","notifications-common/templates/aggregated"],function(e,t){"use strict"
+e.__esModule=!0
+Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})
+define("notifications-ext/templates/application",["exports"],function(e){"use strict"
+e.__esModule=!0
+e.default=Ember.HTMLBars.template({id:"PTszFnbr",block:'{"statements":[[11,"div",[]],[15,"class","nt-content"],[13],[0,"\\n  "],[11,"div",[]],[16,"class",[34,["neptune-grid three-column",[26,["hasGhostContent"]]]]],[13],[0,"\\n"],[6,["lazy-ad-renderer"],null,null,{"statements":[[6,["if"],[[28,["renderAdSections"]]],null,{"statements":[[0,"        "],[1,[33,["component"],[[33,["if"],[[33,["shared-ext@ad-banner-lix-is-enabled"],["lixEnableAddon"],null],"ember-ad-banner@ad-banner","shared-ext@ad-banner"],null]],[["enableAdBlockDetection","slotSize","zone","pageZone"],[[33,["shared-ext@ad-banner-lix-is-enabled"],["lixAdBlockDetection"],null],"700x17","NOTIFICATIONS","PAGE_ZONE_HEADER"]]],false],[0,"\\n"]],"locals":[]},{"statements":[[0,"        "],[11,"div",[]],[15,"class","nt-application__top-ad-placeholder"],[13],[14],[0,"\\n"]],"locals":[]}],[0,"\\n      "],[1,[26,["shared@self-focus"]],false],[0,"\\n\\n      "],[11,"aside",[]],[15,"class","left-rail"],[15,"role","presentation"],[13],[0,"\\n"],[6,["if"],[[28,["renderAdSections"]]],null,{"statements":[[6,["shared@sticky-container"],null,null,{"statements":[[0,"            "],[11,"div",[]],[15,"class","left-rail-container nt-content__rail-container nt-content__rail-container--left"],[13],[0,"\\n              "],[11,"div",[]],[15,"class","nt-notifications-heading container-with-shadow p4"],[13],[0,"\\n"],[6,["if"],[[28,["showSettingGroups"]]],null,{"statements":[[0,"                  "],[11,"h3",[]],[15,"class","Sans-17px-black-85%-semibold-dense"],[13],[1,[33,["t"],["i18n_notifications_setting_groups_title","notifications-ext/templates/application"],null],false],[14],[0,"\\n                  "],[11,"p",[]],[15,"class","Sans-17px-black-55%-dense mt2"],[13],[0,"\\n                    "],[1,[33,["t"],["i18n_notifications_setting_groups_description","notifications-ext/templates/application"],null],false],[0,"\\n                  "],[14],[0,"\\n"],[6,["shared@external-link"],null,[["href","class","target"],["/psettings/messages","nt-content__link link-without-visited-state link-without-hover-state Sans-15px-black-100% mt3 block","_blank"]],{"statements":[[0,"                    "],[1,[33,["t"],["i18n_notifications_setting_groups_link","notifications-ext/templates/application"],null],false],[0,"\\n"]],"locals":[]},null]],"locals":[]},{"statements":[[0,"                  "],[11,"h3",[]],[15,"class","Sans-17px-black-85%-semibold-dense"],[13],[1,[33,["t"],["i18n_notifications_title","notifications-ext/templates/application"],null],false],[14],[0,"\\n                  "],[11,"p",[]],[15,"class","Sans-17px-black-55%-dense mt2"],[13],[0,"\\n"],[6,["if"],[[28,["hasNewNotifications"]]],null,{"statements":[[0,"                      "],[1,[33,["t"],["i18n_notifications_description","notifications-ext/templates/application"],[["numUnseen"],[[28,["numNewNotifications"]]]]],false],[0,"\\n"]],"locals":[]},{"statements":[[0,"                      "],[1,[33,["t"],["i18n_zero_notifications_description","notifications-ext/templates/application"],null],false],[0,"\\n"]],"locals":[]}],[0,"                  "],[14],[0,"\\n"]],"locals":[]}],[0,"              "],[14],[0,"\\n"],[6,["unless"],[[28,["hideCardSettings"]]],null,{"statements":[[0,"                "],[1,[33,["notifications-common@nt-settings-summary"],null,[["numSettings","onEditClick"],[[28,["numSettings"]],[33,["ember-route-action-helper@route-action"],["goToSettings"],null]]]],false],[0,"\\n"]],"locals":[]},null],[6,["if"],[[28,["showPromoCard"]]],null,{"statements":[[0,"                "],[11,"div",[]],[15,"class","nt-notifications-promo nt-notifications-heading container-with-shadow p4"],[13],[0,"\\n                  "],[11,"div",[]],[15,"class","relative inline-block"],[13],[0,"\\n"],[6,["shared/external-link"],null,[["href","data-control-name","target","onclick"],["https://chrome.google.com/webstore/detail/linkedin-extension/meajfmicibjppdgbjfkpdikfjcflabpk","linkedin_extension_chrome_promo_install","_blank",[33,["ember-route-action-helper@route-action"],["closePromo"],null]]],{"statements":[[0,"                      "],[11,"div",[]],[15,"class","nt-notifications-promo__logo"],[13],[14],[0,"\\n"]],"locals":[]},null],[0,"                    "],[11,"button",[]],[15,"class","nt-notifications-promo__dismiss-btn"],[15,"data-control-name","linkedin_extension_chrome_promo_closed"],[5,["action"],[[28,[null]],"closePromo",[33,["tracking"],null,[["control-name"],["linkedin_extension_chrome_promo_closed"]]]]],[13],[0,"\\n                      "],[1,[33,["shared@svg-icon"],null,[["type","size","a11y-text"],["cancel-icon","small",""]]],false],[0,"\\n                    "],[14],[0,"\\n                  "],[14],[0,"\\n                  "],[11,"h3",[]],[15,"class","Sans-17px-black-85%-semibold-dense"],[13],[1,[33,["t"],["i18n_notifications_promo_li_chrome_ext_title","notifications-ext/templates/application"],null],false],[14],[0,"\\n                  "],[11,"p",[]],[15,"class","Sans-17px-black-55%-dense mt2"],[13],[0,"\\n                    "],[1,[33,["t"],["i18n_notifications_promo_li_chrome_ext_desc","notifications-ext/templates/application"],null],false],[0,"\\n                  "],[14],[0,"\\n"],[6,["shared/external-link"],null,[["href","data-control-name","target","class","onclick"],["https://chrome.google.com/webstore/detail/linkedin-extension/meajfmicibjppdgbjfkpdikfjcflabpk","linkedin_extension_chrome_promo_install","_blank","nt-notifications-promo__chrome-ext-button-link",[33,["ember-route-action-helper@route-action"],["closePromo"],null]]],{"statements":[[0,"                    "],[11,"div",[]],[15,"class","button-primary-medium nt-notifications-promo__chrome-ext-button"],[13],[0,"\\n                      "],[1,[33,["t"],["i18n_notifications_promo_li_chrome_ext_button","notifications-ext/templates/application"],null],false],[0,"\\n                    "],[14],[0,"\\n"]],"locals":[]},null],[0,"                "],[14],[0,"\\n"]],"locals":[]},null],[0,"            "],[14],[0,"\\n"]],"locals":[]},null]],"locals":[]},{"statements":[[0,"          "],[11,"div",[]],[15,"class","nt-application__left-rail-placeholder"],[13],[14],[0,"\\n"]],"locals":[]}],[0,"      "],[14],[0,"\\n\\n      "],[11,"div",[]],[15,"class","core-rail"],[15,"role","main"],[13],[0,"\\n        "],[1,[26,["outlet"]],false],[0,"\\n      "],[14],[0,"\\n\\n      "],[11,"aside",[]],[15,"class","right-rail"],[15,"role","presentation"],[13],[0,"\\n"],[6,["if"],[[28,["renderAdSections"]]],null,{"statements":[[6,["shared@sticky-container"],null,null,{"statements":[[0,"            "],[11,"div",[]],[15,"class","right-rail-container nt-content__rail-container"],[13],[0,"\\n              "],[1,[33,["component"],[[33,["if"],[[33,["shared-ext@ad-banner-lix-is-enabled"],["lixEnableAddon"],null],"ember-ad-banner@ad-banner","shared-ext@ad-banner"],null]],[["enableAdBlockDetection","slotSize","zone","pageZone"],[[33,["shared-ext@ad-banner-lix-is-enabled"],["lixAdBlockDetection"],null],"300x250","NOTIFICATIONS","PAGE_ZONE_BODY_RIGHT"]]],false],[0,"\\n\\n              "],[1,[33,["voyager-nav-ext@voyager-nav-ext/neptune-footer"],null,[["rightRail"],[true]]],false],[0,"\\n            "],[14],[0,"\\n"]],"locals":[]},null]],"locals":[]},{"statements":[[0,"          "],[11,"div",[]],[15,"class","nt-application__right-rail-placeholder"],[13],[14],[0,"\\n"]],"locals":[]}],[0,"      "],[14],[0,"\\n"]],"locals":["renderAdSections"]},null],[0,"  "],[14],[0,"\\n"],[14],[0,"\\n"]],"locals":[],"named":[],"yields":[],"hasPartials":false}',meta:{moduleName:"notifications-ext/templates/application.hbs"}})})
+define("notifications-ext/templates/components/lazy-ad-renderer",["exports"],function(e){"use strict"
+e.__esModule=!0
+e.default=Ember.HTMLBars.template({id:"SND5LRmo",block:'{"statements":[[18,"default",[[28,["renderAdSection"]]]]],"locals":[],"named":[],"yields":["default"],"hasPartials":false}',meta:{moduleName:"notifications-ext/templates/components/lazy-ad-renderer.hbs"}})})
+define("notifications-ext/templates/index",["exports","notifications-common/templates/index"],function(e,t){"use strict"
+e.__esModule=!0
+Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})
+define("notifications-ext/templates/index/index",["exports","notifications-common/templates/index/index"],function(e,t){"use strict"
+e.__esModule=!0
+Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})
+define("notifications-ext/templates/segment/index",["exports","notifications-common/templates/segment/index"],function(e,t){"use strict"
+e.__esModule=!0
+Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})
+define("notifications-ext/templates/settings",["exports","notifications-common/templates/settings"],function(e,t){"use strict"
+e.__esModule=!0
+Object.defineProperty(e,"default",{enumerable:!0,get:function(){return t.default}})})
+define("notifications-ext/templates/settings/group",["exports"],function(e){"use strict"
+e.__esModule=!0
+e.default=Ember.HTMLBars.template({id:"8vB+7+RZ",block:'{"statements":[[1,[33,["shared@title-bar"],null,[["dismissalAction","icon","title"],[[33,["ember-route-action-helper@route-action"],["navigateToGroups"],null],"arrow-left-icon",[28,["model","titleDisplayText"]]]]],false],[0,"\\n\\n"],[1,[33,["notifications-common@settings-list"],null,[["onInfiniteScroll","ntCardSettings","showAllNotifications"],[[33,["ember-route-action-helper@route-action"],["getNextPage"],null],[28,["model","elements"]],true]]],false]],"locals":[],"named":[],"yields":[],"hasPartials":false}',meta:{moduleName:"notifications-ext/templates/settings/group.hbs"}})})
+define("notifications-ext/templates/settings/index",["exports"],function(e){"use strict"
+e.__esModule=!0
+e.default=Ember.HTMLBars.template({id:"dnhlTxzf",block:'{"statements":[[1,[33,["shared@title-bar"],null,[["dismissalAction","icon","title"],[[33,["unless"],[[28,["hideBackButton"]],[33,["ember-route-action-helper@route-action"],["backToNotificationsIndex"],null]],null],[33,["unless"],[[28,["hideBackButon"]],"arrow-left-icon"],null],[33,["t"],["nt_notifications_settings_on_linkedin","notifications-ext/templates/settings/index"],null]]]],false],[0,"\\n\\n"],[11,"ul",[]],[15,"class","nt-settings-list"],[13],[0,"\\n"],[6,["each"],[[28,["model","elements"]]],null,{"statements":[[0,"    "],[11,"li",[]],[15,"class","nt-settings-list__card overflow-hidden display-flex align-items-center"],[13],[0,"\\n"],[6,["link-to"],["settings.group",[33,["data-layer@shadowed-prop"],[[28,["settingGroup"]],"type"],null]],[["class"],["nt-settings-list__card-type--group fl link-without-hover-state link-without-visited-state Sans-17px-black-85%"]],{"statements":[[0,"        "],[1,[28,["settingGroup","displayText"]],false],[0,"\\n        "],[1,[33,["shared@svg-icon"],null,[["type","size","class"],["chevron-right-icon","large","nt-settings-list__card-icon"]]],false],[0,"\\n"]],"locals":[]},null],[0,"    "],[14],[0,"\\n"]],"locals":["settingGroup"]},null],[14],[0,"\\n"]],"locals":[],"named":[],"yields":[],"hasPartials":false}',meta:{moduleName:"notifications-ext/templates/settings/index.hbs"}})})
+define("notifications-ext/utils/engine-dependencies",["exports","nt-card-base/utils/addon-dependencies"],function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0})
+e.NOTIFICATIONS_EXT_SERVICES=e.NOTIFICATIONS_EXT_EXTERNAL_ROUTES=void 0
+e.NOTIFICATIONS_EXT_EXTERNAL_ROUTES=t.NOTIFICATIONS_SHARED_EXTERNAL_ROUTES.concat(["email-ge.category","email-ge.category.task"]),e.NOTIFICATIONS_EXT_SERVICES=t.NOTIFICATIONS_SHARED_SERVICES.concat(["ad-banner","ad-banner-manager","launchpad","shared-ext@messaging-overlay"])})
+define.alias("ember-mpr-images/utils/vector-url","notifications-ext/utils/vector-url")
+
+//# sourceMappingURL=engine.map
